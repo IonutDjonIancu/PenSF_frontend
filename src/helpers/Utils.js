@@ -1,4 +1,5 @@
 export const diceUrlApi = 'https://avelraangame.azurewebsites.net/api/palantir/roll20';
+export const serverUrlApi = 'https://pensfbackend.herokuapp.com';
 export const signinPage = 'signin';
 export const homePage = 'home';
 export const registerPage = 'register';

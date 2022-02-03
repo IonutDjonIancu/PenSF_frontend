@@ -12,7 +12,8 @@ import Register from './Register';
 // utilities
 import { 
   particleOptions, 
-  diceUrlApi, 
+  diceUrlApi,
+  serverUrlApi, 
   signinPage, 
   homePage,
   registerPage,
@@ -20,7 +21,6 @@ import {
 // css & media
 import '../styles/App.css';
 import ImageLinkForm from './ImageLinkForm';
-
 
 class App extends React.Component {
 
@@ -60,7 +60,7 @@ class App extends React.Component {
 
     let responseStatus = 404;
 
-    fetch('http://localhost:3000/saveroll', requestOptions)
+    fetch(`${serverUrlApi}/saveroll`, requestOptions)
       .then(response => {
         if (response.status === 200) {
           responseStatus = response.status;
@@ -159,7 +159,7 @@ class App extends React.Component {
 
     let responseStatus = 404;
 
-    fetch('http://localhost:3000/getrank', requestOptions)
+    fetch(`${serverUrlApi}/getrank`, requestOptions)
       .then(response => {
         responseStatus = response.status;
         return response.json();
@@ -252,7 +252,7 @@ class App extends React.Component {
   
       let responseStatus = 404;
 
-      fetch('http://localhost:3000/signin', requestOptions)
+      fetch(`${serverUrlApi}/signin`, requestOptions)
         .then(response => {
           responseStatus = response.status;
           return response.json();
@@ -294,7 +294,7 @@ class App extends React.Component {
 
       let responseStatus = 404;
 
-      fetch('http://localhost:3000/register', requestOptions)
+      fetch(`${serverUrlApi}/register`, requestOptions)
         .then(response => {
           if (response.status === 200) {
             responseStatus = response.status;
