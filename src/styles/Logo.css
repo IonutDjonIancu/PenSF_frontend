@@ -1,0 +1,55 @@
+.Tilt {
+    background: linear-gradient(89deg, black 80%, rgba(4, 200, 222, 0.5) 100%);
+}
+
+.tilt-container {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+h5 {
+    border-bottom: 
+        2px 
+        solid 
+        rgba(65, 80, 62, 0.5);
+    border-right:
+        2px
+        solid
+        rgba(65, 80, 62, 0.5);
+    color:
+        #162712;
+    width: 120%;
+    font-size: 1.5rem;
+}
+
+h5:hover {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-direction: normal; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes pulse {
+    0% {
+        color:#162712
+    }
+    80% {
+        color:#04c8de
+    }
+    85% {
+        color:#162712
+    }
+    90% {
+        color:#04c8de
+    }
+    95% {
+        color:#162712
+    }
+    100% {
+        color:#899F83;
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px rgba(4, 200, 222, 0.3);
+    }
+}
