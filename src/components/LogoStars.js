@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Logo.css';
 import Tilt from 'react-tilt';
-import Starmap from '../media/starmap.gif';
+import Starmap from '../media/Starmap.gif';
 import Chars from '../media/chars.gif';
 import Story from '../media/story.jpg';
 
