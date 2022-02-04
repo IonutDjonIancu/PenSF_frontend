@@ -47,23 +47,21 @@
 }
 
 .app-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   justify-content: center;
+  border: white solid 2px
 }
 
-.app-col-sm {
-  flex-basis: 20%;
-}
-
-.app-col-lg {
-  flex-basis: 80%;
+.app-item {
+  border: greenyellow solid 2px
 }
 
 .centermass {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
 }
 
-.app.grid {
+.container {
   display: grid;
 }

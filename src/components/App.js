@@ -5,7 +5,6 @@ import Particles from 'react-tsparticles';
 import Navigation from './Navigation';
 import Signin from './Signin';
 import FaceRecognition from './FaceRecognition';
-import Logo from './Logo';
 import LogoStars from './LogoStars';
 import Rank from './Rank';
 import Register from './Register';
@@ -41,7 +40,8 @@ class App extends React.Component {
         token: '',
         action: '',
         rank: '',
-        isLoading: false
+        isLoading: false,
+        content: ''
       }
     }
 
@@ -182,24 +182,38 @@ class App extends React.Component {
     console.log("hovering logo");
   }
 
+  showContents = (e) => {
+    this.setState({
+      content: e
+    });
+  }
+
   conditionalRendering = (route) => {
     if (route === homePage) { // home page
       return(
         <div className='app-container'>
-          <div className='app-col-sm centermass'>
-            <div className='app-grid'>
-              <Logo 
-                onHoverLogo={this.onHoverLogo}
+          <div className='app-item centermass'>
+            <div className='container'>
+              <LogoStars
+                showContents={this.showContents} 
+                name={'story'}
               />
-              <Logo 
-                onHoverLogo={this.onHoverLogo}
+              <LogoStars
+                showContents={this.showContents} 
+                name={'chars'}
               />
-              <LogoStars 
-                onHoverLogo={this.onHoverLogo}
+              <LogoStars
+                showContents={this.showContents}
+                name={'starmap'} 
               />
             </div>
           </div> 
-          <div className='app-col-lg'>
+          <div className='app-item'>
+            <h3 className='white'>
+              {'main content will be rendered here'}
+            </h3>
+          </div>
+          <div className='app-item'>
             <Rank
               name={this.state.name}
               rank={this.state.rank} 

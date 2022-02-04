@@ -83,7 +83,7 @@ const returnD20s = (rolls, total) => {
     switch (rolls) {
         case 6:
             return(
-                <div>
+                <div className='container'>
                      <img // 6 d 20
                         className='w-20 image-small br3 ma1' // this could also be a component
                         title={20} 
@@ -130,7 +130,7 @@ const returnD20s = (rolls, total) => {
             );
         case 5:
             return(
-                <div>
+                <div className='container'>
                      <img // 5 d 20
                         className='w-20 image-small br3 ma1' // this could also be a component
                         title={20} 
@@ -171,7 +171,7 @@ const returnD20s = (rolls, total) => {
             );
         case 4:
             return(
-                <div>
+                <div className='container'>
                      <img // 4 d 20
                         className='w-20 image-small br3 ma1' // this could also be a component
                         title={20} 
@@ -206,7 +206,7 @@ const returnD20s = (rolls, total) => {
             );
         case 3:
             return(
-                <div>
+                <div className='container'>
                     <img // 3 d 20
                         className='w-20 image-small br3 ma1' // this could also be a component
                         title={20} 
@@ -235,7 +235,7 @@ const returnD20s = (rolls, total) => {
             );
         case 2:
             return(
-                <div>
+                <div className='container'>
                     <img // 2 d 20
                         className='w-20 image-small br3 ma1' // this could also be a component
                         title={20} 
@@ -258,7 +258,7 @@ const returnD20s = (rolls, total) => {
             );
         case 1:
             return(
-                <div>
+                <div className='container'>
                     <img // 1 d 20
                         className='w-20 image-small br3 ma1' // this could also be a component
                         title={20} 

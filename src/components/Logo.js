@@ -27,7 +27,7 @@ class Logo  extends React.Component {
                         color: 'white',
                     }} 
                 >
-                    {'some text'}
+                    {this.props.name}
                 </p>
             );
         } else {

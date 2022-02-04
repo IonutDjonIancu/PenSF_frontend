@@ -5,10 +5,10 @@ const Rank = ({ name, rank, roll }) => {
     return(
         <div>
             <div className='white f3'>
-                {`${name ? name : 'User'}, your current rank is: ${rank}`}
+                {`${name ? name : 'User'}, rank: ${rank}`}
             </div>
             <div className='black f4'>
-                {`Your highest roll was: ${roll}`}
+                {`Highest roll: ${roll}`}
             </div>
         </div>
     );

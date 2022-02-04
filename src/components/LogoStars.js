@@ -1,7 +1,9 @@
 import React from 'react';
 import '../styles/Logo.css';
 import Tilt from 'react-tilt';
-import StarMap from '../media/starMap.gif';
+import Starmap from '../media/starmap.gif';
+import Chars from '../media/chars.gif';
+import Story from '../media/story.jpg';
 
 class LogoStars  extends React.Component {
 
@@ -23,29 +25,61 @@ class LogoStars  extends React.Component {
         if (isHovered === true) {
             return(
                 <div className='tilt-container'>
-                    <h5 className='pointer'>
-                        {'Starmap'}
+                    <h5 
+                        className='pointer'
+                    >
+                        {this.props.name}
                     </h5>
                 </div>
             );
         } else {
-            return(
-                <img 
-                    alt='starMap' 
-                    src={StarMap}
-                    style={{ 
-                        height: '100%', 
-                        width: '100%', 
-                        borderRadius: '3px'
-                    }} 
-                />
-            );
+            switch(this.props.name) {
+                case 'starmap':
+                    return(
+                        <img 
+                            alt='starMap' 
+                            src={Starmap}
+                            style={{ 
+                                height: '100%', 
+                                width: '100%', 
+                                borderRadius: '3px'
+                            }}
+                        />
+                    );
+                case 'chars': 
+                    return(
+                        <img 
+                            alt='starMap' 
+                            src={Chars}
+                            style={{ 
+                                height: '100%', 
+                                width: '100%', 
+                                borderRadius: '3px'
+                            }} 
+                        />
+                    );
+                default:
+                    return(
+                        <img 
+                            alt='starMap' 
+                            src={Story}
+                            style={{ 
+                                height: '100%', 
+                                width: '100%', 
+                                borderRadius: '3px'
+                            }} 
+                        />
+                    );
+            }
         }
     }
 
     conditionalRendering = () => {
         return(
-            <div className='ma4 mt0'>
+            <div 
+                className='ma4 mt0'
+                onClick={() => this.props.showContents(this.props.name)}
+            >
                 <Tilt 
                     className="Tilt br2 shadow-2" 
                     options={{ max : 25 }} 
