@@ -243,7 +243,6 @@ class App extends React.Component {
     if ((prevState.action !== this.state.action && this.state.action === 'signIn')){ // signin logic
       const requestOptions = {
         method: 'POST',
-        mode: 'cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
             email: this.state.email,
