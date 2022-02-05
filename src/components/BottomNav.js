@@ -20,7 +20,12 @@ class BottomNav extends React.Component {
         return(
             <div className='bottom-nav pa4 br3 shadow-5'>
             {
-                this.props.categories.map(e => (<Button name={e} />))
+                this.props.categories.map(e => (
+                    <div key={e}>
+                        <Button name={e} />
+                    </div>
+
+                ))
             }
             </div>
         )    

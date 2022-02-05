@@ -1,5 +1,6 @@
 import React from 'react';
-import ContentStory from './ContentStory'
+import ContentStory from './ContentStory';
+import ContentChars from './ContentChars';
 import '../styles/Content.css';
 
 class Content extends React.Component {
@@ -18,6 +19,24 @@ class Content extends React.Component {
             return(
                 <div>
                     <ContentStory />
+                </div>
+            );
+        } else if(display === 'chars') {
+            return(
+                <div>
+                    <ContentChars />
+                </div>
+            );
+        } else if(display === 'starmap') {
+            return(
+                <div>
+                    {'show starmap'}
+                </div>
+            );
+        } else {
+            return(
+                <div>
+                    {'<- select category'}
                 </div>
             );
         }

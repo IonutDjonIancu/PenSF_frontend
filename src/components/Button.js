@@ -12,8 +12,10 @@ class Button extends React.Component {
 
     render() {
         return(
-            <div className='ma2'>
-                <button 
+            <div
+                className='ma2'
+            >
+                <button
                     className='f6 grow br3 ph3 pv2 mb2 dib black bg-moon-gray'
                 >
                 {this.props.name}
