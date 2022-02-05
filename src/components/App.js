@@ -8,6 +8,8 @@ import FaceRecognition from './FaceRecognition';
 import LogoStars from './LogoStars';
 import Rank from './Rank';
 import Register from './Register';
+import BottomNav from './BottomNav';
+import Content from './Content';
 // utilities
 import { 
   particleOptions, 
@@ -41,7 +43,8 @@ class App extends React.Component {
         action: '',
         rank: '',
         isLoading: false,
-        content: ''
+        content: '',
+        categories: ['Story', 'Chars', 'Starmap']
       }
     }
 
@@ -209,9 +212,9 @@ class App extends React.Component {
             </div>
           </div> 
           <div className='app-item'>
-            <h3 className='white'>
-              {'main content will be rendered here'}
-            </h3>
+            <Content 
+              display={this.state.content}
+            />
           </div>
           <div className='app-item'>
             <Rank
@@ -230,6 +233,9 @@ class App extends React.Component {
               isLoading={this.state.isLoading}
             />
           </div>
+          <BottomNav 
+            categories={this.state.categories}
+          />
         </div>
       );
     } else if (route === registerPage) { // register page

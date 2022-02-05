@@ -24,7 +24,10 @@ class LogoStars  extends React.Component {
     textSwap = (isHovered) => {
         if (isHovered === true) {
             return(
-                <div className='tilt-container'>
+                <div 
+                    className='tilt-container'
+                    onClick={() => this.props.showContents(this.props.name)}
+                >
                     <h5 
                         className='pointer'
                     >
@@ -77,7 +80,7 @@ class LogoStars  extends React.Component {
     conditionalRendering = () => {
         return(
             <div 
-                className='ma4 mt0'
+                className='ma4 mt0 tilt-container'
                 onClick={() => this.props.showContents(this.props.name)}
             >
                 <Tilt 

@@ -50,11 +50,11 @@
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   justify-content: center;
-  border: white solid 2px
+  border: none
 }
 
 .app-item {
-  border: greenyellow solid 2px
+  border: none
 }
 
 .centermass {
@@ -64,4 +64,13 @@
 
 .container {
   display: grid;
+}
+
+
+@media screen and (max-width: 600px) {
+  .app-container {
+    grid-template-columns: 0fr 3fr 1fr;
+  }
+
+
 }

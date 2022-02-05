@@ -1,0 +1,14 @@
+.bottom-nav {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 600px) {
+    .bottom-nav {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        visibility: visible;
+        display: flex;
+        justify-content: center;
+    }
+}
+
