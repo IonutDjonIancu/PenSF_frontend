@@ -17,8 +17,9 @@ class Button extends React.Component {
             >
                 <button
                     className='f6 grow br3 ph3 pv2 mb2 dib black bg-moon-gray'
+                    onClick={() => this.props.show(this.props.name.toLowerCase())}
                 >
-                {this.props.name}
+                    {this.props.name}
                 </button>
             </div>
         )    

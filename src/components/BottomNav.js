@@ -13,6 +13,9 @@ class BottomNav extends React.Component {
         
     }
     
+    showName = (e) => {
+        this.props.showContents(e);
+    }
     
     
     render() {
@@ -22,7 +25,10 @@ class BottomNav extends React.Component {
             {
                 this.props.categories.map(e => (
                     <div key={e}>
-                        <Button name={e} />
+                        <Button 
+                            name={e} 
+                            show={this.showName}
+                        />
                     </div>
 
                 ))

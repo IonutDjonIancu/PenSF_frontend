@@ -31,6 +31,9 @@ class Content extends React.Component {
         } else if(display === 'starmap') {
             return(
                 <div>
+                    <p className='hiddenInfo'>
+                        {'Starmap does not render for screen size smaller than 600px'}
+                    </p>
                     <img
                         className='br3' 
                         alt='starmap' 

@@ -235,6 +235,7 @@ class App extends React.Component {
           </div>
           <BottomNav 
             categories={this.state.categories}
+            showContents={this.showContents}
           />
         </div>
       );
