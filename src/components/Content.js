@@ -2,6 +2,7 @@ import React from 'react';
 import ContentStory from './ContentStory';
 import ContentChars from './ContentChars';
 import '../styles/Content.css';
+import Starmap from '../media/starmap.png';
 
 class Content extends React.Component {
 
@@ -30,7 +31,11 @@ class Content extends React.Component {
         } else if(display === 'starmap') {
             return(
                 <div>
-                    {'show starmap'}
+                    <img
+                        className='br3' 
+                        alt='starmap' 
+                        src={Starmap} 
+                    />
                 </div>
             );
         } else {
